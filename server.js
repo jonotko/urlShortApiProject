@@ -13,7 +13,9 @@ app.get("/", function(req, res){
 });
 
 app.get("/:urlString(*)", function(req, res){
-    var jsonObject;
+    var jsonObject = {
+        error: "URL invalid"
+    };
     if(isUrl(req.params.urlString)){
        TinyURL.shorten('http://google.com', function(shurl) {
             //console.log(res); //Returns a shorter version of http://google.com - http://tinyurl.com/2tx 
