@@ -6,10 +6,8 @@ var TinyURL = require("tinyurl");
 var app = express();
 
 app.get("/", function(req, res){
-    var jsonObject = {
-        name: "http://www.google.com"
-    }
-    res.send(jsonObject);
+    
+    res.send("SHORT URL API PROJECT");
 });
 
 app.get("/:urlString(*)", function(req, res){
